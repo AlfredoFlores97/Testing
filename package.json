@@ -41,9 +41,10 @@
     }
   },
   "lint-staged": {
-    "*.jsx": [
-      "eslint --fix",
-      "vite test --findRelatedTests"
-    ]
-  }
+  "*.jsx": [
+    "eslint --fix",
+    "vite test --findRelatedTests || exit 1"
+  ]
+}
+
 }
