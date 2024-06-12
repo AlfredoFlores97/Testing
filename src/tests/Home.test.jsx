@@ -90,7 +90,7 @@ describe('Home component', () => {
 
         // Verificar que los valores de los inputs se actualizan
         expect(emailInput.value).toBe(username);
-        expect(passwordInput.value).toBe('password');
+        expect(passwordInput.value).toBe(password);
     });
 
     test('handles form submission', () => {
