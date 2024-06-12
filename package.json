@@ -43,7 +43,7 @@
   "lint-staged": {
   "*.jsx": [
     "eslint --fix",
-    "vite test --findRelatedTests || exit 1"
+    "vitest test --findRelatedTests || exit 1"
   ]
 }
 
