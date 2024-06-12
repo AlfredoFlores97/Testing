@@ -24,7 +24,7 @@ describe('Home component', () => {
         expect(screen.getByLabelText(/remember me/i)).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument();
         expect(screen.getByText(/forgot password\?/i)).toBeInTheDocument();
-        expect(screen.getByText(/don't have an account\? sign up/i)).toBeInTheDocumsdaasdent();
+        expect(screen.getByText(/don't have an account\? sign up/i)).toBeInTheDocument();
     });
 
     test('toggles remember me checkbox', () => {
