@@ -1,5 +1,4 @@
-import React from 'react';
-import { describe, expect, test, vi } from "vitest";
+import { afterAll, beforeAll, describe, expect, test, vi } from "vitest";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Home } from '../pages/Home';
@@ -90,7 +89,7 @@ describe('Home component', () => {
 
         // Verificar que los valores de los inputs se actualizan
         expect(emailInput.value).toBe(username);
-        expect(passwordInput.value).toBe(password);
+        expect(passwordInput.value).toBe('password');
     });
 
     test('handles form submission', () => {
