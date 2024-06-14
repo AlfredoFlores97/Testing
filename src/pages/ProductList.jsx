@@ -16,6 +16,7 @@ const ProductList = () => {
     };
 
     useEffect(() => {
+        fetchProducts()
         fetchProduct(2);
     }, []);
 

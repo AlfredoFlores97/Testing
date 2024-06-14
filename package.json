@@ -36,5 +36,16 @@
     "lint-staged": "^15.2.7",
     "vite": "^4.4.5",
     "vitest": "^0.34.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test --silent || (echo 'Tests failed. Commit aborted.' && exit 1)"
+    }
   }
 }
