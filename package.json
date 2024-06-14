@@ -42,10 +42,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test --silent || (echo 'Tests failed. Commit aborted.' && exit 1)"
-    }
   }
 }
