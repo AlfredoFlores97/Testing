@@ -1,0 +1,2 @@
+#!/bin/sh
+npm run test --silent || (echo "Tests failed. Commit aborted."; exit 1)

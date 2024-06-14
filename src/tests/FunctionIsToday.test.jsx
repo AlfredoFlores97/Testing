@@ -8,7 +8,7 @@ describe("Test function is today", () => {
     });
 
     test('should return true for today\'s date', () => {
-        expect(isToday('2024-06-12')).toBe(true);
+        expect(isToday('2024-06-14')).toBe(true);
     });
 
     test('should return false for a date in the past', () => {

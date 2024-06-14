@@ -1,8 +1,8 @@
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, test } from "vitest";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Checkbox } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 describe("Checkbox tests", () => {
   test('renders unchecked checkbox correctly', () => {

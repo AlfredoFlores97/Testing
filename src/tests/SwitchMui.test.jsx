@@ -2,7 +2,7 @@ import { describe, expect, test, vi } from "vitest";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Switch } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 describe("Test SwitchMui", () => {
   test('renders Switch correctly', () => {

@@ -1,5 +1,5 @@
-import { render, screen, fireEvent, waitForElement } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
 import '@testing-library/jest-dom';
 import { Select } from "../components/Select";
 
