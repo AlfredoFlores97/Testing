@@ -1,6 +1,8 @@
+// import { Button } from "@mui/material"
+// import { TextField } from "@mui/material"
+// import { Select } from "./components/Select";
 // import { Home } from "./pages/Home";
 import ProductList from "./pages/ProductList";
-// import { Select } from "./components/Select";
 
 const App = () => {
   // const mockedOptions = [
