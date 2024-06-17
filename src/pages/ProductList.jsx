@@ -27,7 +27,7 @@ const ProductList = () => {
         <button onClick={() => fetchProduct(2)}>Click me</button>
         <ul>
             {products.map(product => (
-                <li key={product.id}>{product.title}</li>
+                <li title={product.title} key={product.id}>{product.title}</li>
             ))}
         </ul>
         {product && <TextField label={product?.title} />}

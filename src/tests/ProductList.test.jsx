@@ -2,6 +2,7 @@ import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 import '@testing-library/jest-dom';
 import ProductList from '../pages/ProductList';
+import {productsData, productData } from '../constant';
 
 describe('ProductList', () => {
     beforeAll(() => {
@@ -22,8 +23,20 @@ describe('ProductList', () => {
         });
     });
 
+    it('for each - renders product list', async () => {
+        render(<ProductList />);
+        await waitFor(() => {
+            const items = screen.getAllByRole('listitem');
+            expect(items).toHaveLength(20);
+            productsData.forEach((product, index) => {
+                expect(items[index].title).toBe(product.title)
+            })
+        });
+    });
+
     it('should fetch and display a single product on button click', async () => {
         render(<ProductList />);
+        expect(screen.queryByLabelText('Mens Casual Premium Slim Fit T-Shirts')).not.toBeInTheDocument();
 
         fireEvent.click(screen.getByText('Click me'));
 
@@ -40,6 +53,18 @@ describe('ProductList', () => {
                     "count": 259
                 }
             });
+            expect(screen.getByLabelText('Mens Casual Premium Slim Fit T-Shirts')).toBeInTheDocument();
+        });
+    });
+
+    it('Better practice should fetch and display a single product on button click', async () => {
+        render(<ProductList />);
+        expect(screen.queryByLabelText('Mens Casual Premium Slim Fit T-Shirts')).not.toBeInTheDocument();
+
+        fireEvent.click(screen.getByText('Click me'));
+
+        await waitFor(() => {
+            expect(console.log).toHaveBeenCalledWith(productData);
             expect(screen.getByLabelText('Mens Casual Premium Slim Fit T-Shirts')).toBeInTheDocument();
         });
     });
