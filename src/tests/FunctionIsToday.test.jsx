@@ -23,7 +23,6 @@ describe("Test function is today", () => {
     });
 
     test('should throw an error for an invalid date string', () => {
-        console.log('prueba')
         expect(() => {
             isToday('invalid-date-string');
         }).toThrow('Invalid date');
