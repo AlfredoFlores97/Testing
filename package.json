@@ -8,7 +8,8 @@
     "build": "vite build",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
