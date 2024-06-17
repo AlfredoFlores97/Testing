@@ -1,4 +1,5 @@
-import { Home } from "./pages/Home";
+// import { Home } from "./pages/Home";
+import ProductList from "./pages/ProductList";
 // import { Select } from "./components/Select";
 
 const App = () => {
@@ -16,10 +17,11 @@ const App = () => {
   // ];
   return (
     <div className="full-height flex-center">
-      {/* <Button fullWidth style={{ backgroundColor: 'green', color: 'white'}}>Styled Button</Button>
-      <TextField label="Username" />
-      <Select options={mockedOptions} value={'mocked-option-1'}/> */}
-      <Home/>
+      {/* <Button fullWidth style={{ backgroundColor: 'green', color: 'white'}}>Styled Button</Button> */}
+      {/* <TextField label="Username" /> */}
+      {/* <Select options={mockedOptions} value={'mocked-option-1'}/> */}
+      {/* <Home/> */}
+      <ProductList />
     </div>
   )
 }

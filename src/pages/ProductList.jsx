@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProduct, getProducts } from '../service/Api';
+import { TextField } from '@mui/material';
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState();
 
     const fetchProducts = async () => {
         const productsData = await getProducts();
@@ -11,24 +12,25 @@ const ProductList = () => {
     };
 
     const fetchProduct = async (id) => {
-        const productsData = await getProduct(id);
-        setProduct(productsData);
+        const productData = await getProduct(id);
+        setProduct(productData);
+        console.log(productData)
     };
-
+    
     useEffect(() => {
         fetchProducts()
-        fetchProduct(2);
     }, []);
 
     return (
         <div>
         <h1>Product List</h1>
-        <button onClick={fetchProducts}>Click me</button>
+        <button onClick={() => fetchProduct(2)}>Click me</button>
         <ul>
             {products.map(product => (
                 <li key={product.id}>{product.title}</li>
             ))}
         </ul>
+        {product && <TextField label={product?.title} />}
         </div>
     );
 };
